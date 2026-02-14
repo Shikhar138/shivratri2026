@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maha Shivratri 2026 | Special Wish</title>
+    <style>
+        :root {
+            --neon: #ff4500;
+            --gold: #ffcc00;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #050505;
+            /* Background Watermark Text */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ctext x='10' y='50' fill='rgba(255, 69, 0, 0.05)' font-size='20' font-family='Arial'%3Eॐ%3C/text%3E%3Ctext x='60' y='80' fill='rgba(255, 204, 0, 0.05)' font-size='15' font-family='Arial'%3E🔱%3C/text%3E%3C/svg%3E");
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 450px;
+            padding: 40px 15px;
+        }
+
+        /* Neon Name Effect */
+        .neon-name {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #fff;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px #fff, 0 0 20px var(--neon), 0 0 30px var(--neon);
+            margin-bottom: 5px;
+        }
+
+        .sub-text {
+            color: var(--gold);
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+
+        /* Image Frame - Isme teri image proper dikhegi */
+        .image-container {
+            position: relative;
+            margin: 20px auto;
+            width: 250px;
+            height: 250px;
+        }
+
+        .main-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px; /* Square with rounded corners */
+            border: 3px solid var(--neon);
+            box-shadow: 0 0 25px var(--neon);
+            object-fit: cover;
+            animation: glow 2s infinite alternate;
+        }
+
+        /* Timer Style */
+        .timer {
+            font-size: 1.4rem;
+            color: var(--gold);
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid rgba(255, 204, 0, 0.3);
+            background: rgba(255, 69, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255, 69, 0, 0.2);
+        }
+
+        /* Mantra Box */
+        .mantra-box {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+            border-bottom: 4px solid var(--neon);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .mantra-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #eee;
+        }
+
+        /* WhatsApp Button */
+        .btn-share {
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: white;
+            padding: 18px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: inline-block;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 0 10px var(--neon); }
+            to { box-shadow: 0 0 30px var(--neon); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        audio { width: 80%; margin-top: 20px; filter: invert(1); }
+    </style>
+</head>
+<body onclick="playSong()">
+
+    <div class="container">
+        <p class="sub-text">🔱 MAHADEV BLESSINGS 🔱</p>
+        
+        <div class="neon-name">Shikhar</div>
+
+        <p style="margin-top:0;">Wishing You A Very Happy</p>
+        <h2 style="color: var(--neon); font-size: 2rem;">MAHA SHIVRATRI 2026</h2>
+
+        <div class="timer" id="countdown">Loading...</div>
+
+        <div class="image-container">
+            <img src="mahakal.jpg" class="main-img" alt="Mahakal">
+        </div>
+
+        <div class="mantra-box">
+            <div class="mantra-text">
+                कर्पूरगौरं करुणावतारं <br>
+                संसारसारम् भुजगेन्द्रहारम् । <br>
+                सदावसन्तं हृदयारविन्दे <br>
+                भवं भवानीसहितं नमामि ॥
+            </div>
+        </div>
+
+        <audio id="bgMusic" loop>
+            <source src="mahakal.mp3" type="audio/mpeg">
+        </audio>
+
+        <p style="font-size: 0.7rem; color: #888;">TAP ANYWHERE TO PLAY MUSIC 🎵</p>
+
+        <br>
+        <a href="whatsapp://send?text=🔱 *Maha Shivratri 2026* 🔱 Check out this special wish from me: [LINK_YAHAN_DALEIN]" class="btn-share">
+            SHARE ON WHATSAPP
+        </a>
+    </div>
+
+    <script>
+        // Music Play Function
+        function playSong() {
+            document.getElementById("bgMusic").play();
+        }
+
+        // Timer Logic
+        const dest = new Date("Feb 15, 2026 00:00:00").getTime();
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const diff = dest - now;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + mins + "m " + secs + "s ";
+
+            if (diff < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "JAI MAREKHAL!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
